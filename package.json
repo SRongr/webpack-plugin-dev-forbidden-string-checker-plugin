@@ -1,25 +1,27 @@
 {
-  "name": "forbidden-string-checker-plugin",
-  "version": "1.0.0",
+  "name": "webpack-plugin-dev-forbidden-string-checker-plugin",
+  "version": "1.0.1",
   "description": "在开发环境使用，查找违禁词 可以用正则。国际化项目可以用来找没有翻译的中文",
-  "main": "index.ts",
+  "main": "dits/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
-    "build": "rm -rf dist && unbuild",
-    "tsc:build": "rm -rf dist && tsc && tsc --emitDeclarationOnly --outDir dist",
+    "build:unbuild": "rm -rf dist && unbuild",
+    "build": "rm -rf dist && tsc && tsc --emitDeclarationOnly --outDir dist",
     "prepublishOnly": "npm run build",
     "type-check": "tsc --noEmit"
   },
-	"files": ["dist"],
-	"types": "dist/index.d.ts",
-	"exports": {
-		".": {
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
-	},
+  },
   "author": "SRongr",
   "license": "ISC",
   "dependencies": {
