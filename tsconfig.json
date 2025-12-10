@@ -1,0 +1,56 @@
+// {
+//   "compilerOptions": {
+// 		// "target": "ESNext",
+//     // "module": "ESNext",
+//     // "moduleResolution": "Node",
+//     // "allowSyntheticDefaultImports": true
+//     "target": "es6",
+//     "module": "es6",
+//     "lib": ["es6"],
+//     "declaration": true,
+// 		"declarationMap": true, // 可选：生成声明映射
+//     "outDir": "./dist",
+//     "rootDir": "./src",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true, // 跳过声明文件的类型检查
+//     "moduleResolution": "node",
+// 		/* Node.js 环境特定 */
+//     "types": ["node"]
+//   },
+//   "include": [
+//     "src/**/*"
+//   ],
+// }
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+		"downlevelIteration": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+		//  // 重要：确保包含所有文件
+    // "composite": true,
+    
+    // // 确保能解析模块
+    
+    // // 处理类型导出
+    // "emitDeclarationOnly": false,
+    
+    // // 确保类型被包含
+    // "isolatedModules": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
